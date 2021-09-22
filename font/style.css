@@ -421,6 +421,10 @@ input[type="text"], input[type="password"] {
   margin-top: 60px;
 }
 
+.grid {
+  background: rgba(0, 0, 0, 0.35);
+}
+
 .container__banner-wrap {
   padding: 50px 0;
   justify-content: center;
