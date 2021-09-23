@@ -44,11 +44,12 @@ header {
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
 }
         /*---- menu-header----- */
 div.main-menu {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   padding-top: 7px;
   width: 100%;
@@ -92,9 +93,24 @@ div.main-menu {
   text-decoration: none;
 }
 
+.menu-items li:last-child a:hover {
+  background: transparent;
+}
+
+.menu-items li:last-child a:hover i {
+  color: white;
+}
+
 @font-face {
   font-family: Slogan;
   src: url(/font/BonheurRoyale-Regular.ttf);
+}
+
+        /* ----- user ----- */
+
+.fa-user {
+  color: lightblue;
+  font-size: 35px;
 }
 
         /*----- Slogan-header ----- */
@@ -181,13 +197,14 @@ section.discovery {
 nav.log-in {
   padding: 0 50px;
   width: 40%;
+  height: 80%;
 }
 
                   /* -----phan dau----- */
 
 .header-content {
-  padding: 15px 0;
   width: 100%;
+  height: 17%;
 }
 
 .header-content > h1 {
@@ -211,21 +228,29 @@ nav.log-in {
   color: #055c81;
 }
 
-.border:hover span {
+.border:hover {
   color: #31a7da;
   font-size: 16.5px;
+  width: 75%;
 }
 
 .log-in-form {
   width: 100%;
   border: 1px solid #3e97bd;
+  height: 70%;
 }
 
 .login-title h3{
   color: var(--main-color);
-  padding: 25px;
+  padding: 20px;
   font-size: 25px;
   font-weight: normal;
+  height: 10%;
+}
+
+.login-with {
+  height: 20%;
+  
 }
 
 .login-with-gg img {
@@ -240,6 +265,7 @@ nav.log-in {
 .input-form {
   padding: 20px 0;
   width: 70%;
+  height: 70%;
 }
 
 .form p{
@@ -266,6 +292,21 @@ input[type="text"], input[type="password"] {
 
 .btn {
   width: 100%;
+  height: 13%;
+}
+
+.col50 {
+  width: 50%;
+}
+
+.c1 {
+  justify-content: flex-end;
+  margin-right: 3px;
+}
+
+.c2 {
+  justify-content: flex-start;
+  margin-left: 3px;
 }
 
 .btn button {
@@ -273,28 +314,28 @@ input[type="text"], input[type="password"] {
   width: 150px;
   background-color: var(--main-color);
   color: #fff;
-  margin-top: 15px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
   transition: all 0.2s ease;
 }
 
-.btn > button.first {
+.btn > .c1 > button.first {
   background: transparent;
   color: var(--main-color);
   border: 1px solid var(--main-color);
 }
 
-.btn button.first:hover {
-  background-color: var(--main-color);
-  color: white;
+.btn > .c1 > button.first:hover {
+  font-size: 14px;
+  height: 40px;
 }
 
-.btn button:last-child:hover {
-  background-color: transparent;
-  border: 1px solid var(--main-color);
-  color: var(--main-color);
+.btn > .c2 > button:last-child:hover {
+  background-color: #31a7da;
+  border: 1px solid #31a7da;
+  font-size: 14.5px;
+  height: 40px;
 }
 
         /*----- hinh anh minh hoa ----- */
@@ -728,7 +769,7 @@ footer h1 {
   text-align: center;
 }
 
-/* ----- cột 1 -----*/
+        /* ----- cột 1 -----*/
 
 .col1 > img {
   width: 80%;
@@ -758,7 +799,7 @@ footer h1 {
   color: lightblue;
 }
 
-/* -----Cot 2----- */
+        /* -----Cot 2----- */
 
 .col2 .c-menu ul {
   list-style-type: disc;
@@ -775,7 +816,8 @@ footer h1 {
 .c-menu a:hover {
   color: white;
 }
-/* -----Cot 3----- */
+
+        /* -----Cot 3----- */
 
 .col3-title h1 {
   width: 80%;
@@ -783,4 +825,101 @@ footer h1 {
 
 .col3-item {
   width: 80%;
+}
+
+/* -----Đánh giá----- */
+
+.feedback {
+  margin: 0 8% 0;
+  height: 100%;
+}
+
+.fbk_title {
+  text-align: center;
+  font-size: 35px;
+  color: var(--main-color);
+  margin: 40px 0 70px;
+  position: relative;
+}
+
+.fbk_title::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 150px;
+  background-color: var(--main-color);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.fbk_title::after {
+  position: absolute;
+  content: "\2764";
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 30px;
+  color: red;
+  background-color: #fff;
+  bottom: -20px;
+}
+
+.col30 {
+  width: 30%;
+}
+
+.fbk-item {
+  height: 40%;
+  justify-content: space-evenly;
+  color: var(--main-color);
+  border: 0.5px solid #aaaa;
+  box-shadow: 10px 10px 10px #aaaa;
+  margin: 0px 10px;
+}
+
+.fbk-item-container {
+  margin: 25px;
+}
+
+.fbk-item-user {
+  width: 55%;
+}
+
+.fbk-item-user-img {
+  width: 25%;
+}
+
+.fbk-item-user-img img {
+  width: 70%;
+  border-radius: 50%;
+}
+
+.fbk-item-user-info {
+  width: 75%;
+}
+
+.fbk-item-user-info i {
+  color: #ef910a;
+}
+
+.fbk-item-user p:first-child {
+  font-weight: 550;
+  font-size: 20px;
+  width: 100%;
+}
+
+.fbk-item .fbk-item-rating {
+  width: 45%;
+  height: 100%;
+}
+
+.fbk-item-review p {
+  color: #929191;
+}
+
+.fbk-item-review img {
+  width: 50%;
+  padding: 10px 2.5px;
 }
