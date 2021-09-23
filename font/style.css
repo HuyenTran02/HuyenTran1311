@@ -44,11 +44,12 @@ header {
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
 }
         /*---- menu-header----- */
 div.main-menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding-top: 7px;
   width: 100%;
@@ -58,8 +59,6 @@ div.main-menu {
 .main-menu img {
   width: 16%;
   height: 80px;
-  margin-right: 0;
-  margin-left: 100px;
 }
 
 .menu {
@@ -76,10 +75,14 @@ div.main-menu {
   margin-top: 20px;
 }
 
+.menu-items li:last-child a{
+  position: relative;
+}
+
 .menu-items li a {
   display: block;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 12.5px;
+  padding-right: 12.5px;
   line-height: 29.5px;
   height: 50%;
   font-size: 17.5px;
@@ -94,9 +97,53 @@ div.main-menu {
   text-decoration: none;
 }
 
+.menu-items li:last-child a:hover {
+  background: transparent;
+}
+
+.menu-items li:last-child a:hover i {
+  color: white;
+}
+
 @font-face {
   font-family: Slogan;
   src: url(/font/BonheurRoyale-Regular.ttf);
+}
+
+        /* ----- user ----- */
+
+.fa-user {
+  color: lightblue;
+  font-size: 35px;
+}
+
+.menu-user {
+  position: absolute;
+  top: 75px;
+  right: 1.7%;
+  width: 15.75%;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 100px;
+  visibility: hidden;
+}
+
+.menu-user::before {
+  content: " ";
+  border-width: 12px;
+  border-style: solid;
+  border-color: transparent transparent rgba(255, 255, 255, 0.35) transparent;
+  position: absolute;
+  top: -24px;
+  left: 97.5px;
+}
+
+.menu-user > div > a {
+  font-size: 14px;
+  color: #055c81;
+}
+
+.user:hover .menu-user {
+  visibility: visible;
 }
 
         /*----- Slogan-header ----- */
@@ -166,6 +213,7 @@ div.main-menu {
 .up a:hover p{
   color: white;
 }
+
 /*----- Kham pha ----- */
 
 section.discovery {
@@ -179,59 +227,119 @@ section.discovery {
 
         /*----- form tim kiem ----- */
 
-nav.checked {
+nav.log-in {
   padding: 0 50px;
   width: 40%;
+  height: 80%;
 }
 
+                  /* -----phan dau----- */
+
 .header-content {
-  padding-top: 20px;
-  text-align: center;
-  width: 400px;
+  width: 100%;
+  height: 17%;
 }
 
 .header-content > h1 {
   color: var(--main-color);
-  font-size: 40px;
-}
+  font-size: 35px;
+}              
 
 .header-content > p {
   color: #055c81;
-  font-size: 25px;
+  font-size: 35px;
+  font-family: Slogan;
 }
 
-.checked-form {
+                /* -----phan giua----- */
+
+.border {
+  border: 1px solid var(--main-color);
+  width: 70%;
+  margin-bottom: 10px;
+  border-radius: 100px;
+  color: #055c81;
+}
+
+.border:hover {
+  color: #31a7da;
+  font-size: 16.5px;
+  width: 75%;
+}
+
+.log-in-form {
   width: 100%;
+  border: 1px solid #3e97bd;
+  height: 70%;
 }
 
-form {
-  padding: 0px 12px;
-  margin-top: 20px;
+.login-title h3{
+  color: var(--main-color);
+  padding: 20px;
+  font-size: 25px;
+  font-weight: normal;
+  height: 10%;
 }
 
-form h1 {
-  color: #333;
-  font-size: 20px;
+.login-with {
+  height: 20%;
+  
 }
 
-form select,
-input {
+.login-with-gg img {
+  width: 10.5%;
+}
+
+.login-with-fb img {
+  width: 8%;
+  margin: 4px 5px;
+}
+
+.input-form {
+  padding: 20px 0;
+  width: 70%;
+  height: 70%;
+}
+
+.form p{
+  text-align: left;
+  padding: 5px 0;
+  color: #055c81;
+}
+
+input[type="text"], input[type="password"] {
   width: 100%;
   height: 35px;
-  padding-left: 12px;
-  outline: none;
-  background-color: #dddd;
-  border: none;
+  margin-bottom: 10px;
+  padding-left: 7px;
+  border-radius: 7px;
+  border: 1px solid #3e97bd;
 }
 
-form p {
-  text-align: left;
-  color: var(--main-color);
-  margin: 8px 10px 3px;
+.input-pass a {
+  font-size: 12px;
+  color: #055c81;
 }
+
+                /* -----phan cuoi----- */
 
 .btn {
   width: 100%;
+  height: 13%;
+}
+
+.col50 {
+  width: 50%;
+}
+
+.c1 {
+  justify-content: flex-end;
+  margin-right: 3px;
+}
+
+.c2 {
+  justify-content: flex-start;
+  margin-left: 3px;
 }
 
 .btn button {
@@ -239,17 +347,28 @@ form p {
   width: 150px;
   background-color: var(--main-color);
   color: #fff;
-  margin-top: 20px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
   transition: all 0.2s ease;
 }
 
-.btn button:hover {
-  background-color: transparent;
-  border: 1px solid var(--main-color);
+.btn > .c1 > button.first {
+  background: transparent;
   color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+
+.btn > .c1 > button.first:hover {
+  font-size: 14px;
+  height: 40px;
+}
+
+.btn > .c2 > button:last-child:hover {
+  background-color: #31a7da;
+  border: 1px solid #31a7da;
+  font-size: 14.5px;
+  height: 40px;
 }
 
         /*----- hinh anh minh hoa ----- */
@@ -327,7 +446,7 @@ form p {
   margin: 0 0 70px;
   color: var(--main-color);
   position: relative;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 .nice-place h1::before {
@@ -374,6 +493,10 @@ form p {
   background: url(../images/cta.jpg) center / cover no-repeat;
   width: 100%;
   margin-top: 60px;
+}
+
+.grid {
+  background: rgba(0, 0, 0, 0.35);
 }
 
 .container__banner-wrap {
@@ -459,7 +582,7 @@ form p {
 
 .offers_title {
   text-align: center;
-  font-size: 40px;
+  font-size: 35px;
   color: var(--main-color);
   margin: 40px 0 70px;
   position: relative;
@@ -580,7 +703,7 @@ div > img {
 
 .hotel_title {
   text-align: center;
-  font-size: 40px;
+  font-size: 35px;
   color: var(--main-color);
   margin: 40px 0 70px;
   position: relative;
@@ -679,7 +802,7 @@ footer h1 {
   text-align: center;
 }
 
-/* ----- cột 1 -----*/
+        /* ----- cột 1 -----*/
 
 .col1 > img {
   width: 80%;
@@ -709,7 +832,7 @@ footer h1 {
   color: lightblue;
 }
 
-/* -----Cot 2----- */
+        /* -----Cot 2----- */
 
 .col2 .c-menu ul {
   list-style-type: disc;
@@ -726,7 +849,8 @@ footer h1 {
 .c-menu a:hover {
   color: white;
 }
-/* -----Cot 3----- */
+
+        /* -----Cot 3----- */
 
 .col3-title h1 {
   width: 80%;
@@ -734,4 +858,108 @@ footer h1 {
 
 .col3-item {
   width: 80%;
+}
+
+/* -----Đánh giá----- */
+
+.feedback {
+  margin: 0 8% 0;
+  height: 100%;
+}
+
+.fbk_title {
+  text-align: center;
+  font-size: 35px;
+  color: var(--main-color);
+  margin: 40px 0 50px;
+  position: relative;
+}
+
+.fbk_title::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 150px;
+  background-color: var(--main-color);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.fbk_title::after {
+  position: absolute;
+  content: "\2764";
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 30px;
+  color: red;
+  background-color: #fff;
+  bottom: -20px;
+}
+
+.feedback h3 a {
+  color: #929191;
+  text-decoration: underline;
+}
+
+.feedback h3 {
+  margin: 0 0 25px 0;
+  color: #929191;
+  font-weight: 320;
+}
+
+.fbk-item {
+  height: 40%;
+  justify-content: space-evenly;
+  color: var(--main-color);
+  border: 0.5px solid #aaaa;
+  box-shadow: 10px 10px 10px #aaaa;
+  margin: 0px 10px;
+}
+
+.fbk-item-container {
+  margin: 25px;
+}
+
+.fbk-item-user {
+  width: 55%;
+}
+
+.fbk-item-user-img {
+  width: 25%;
+}
+
+.fbk-item-user-img img {
+  width: 70%;
+  border-radius: 50%;
+}
+
+.fbk-item-user-info {
+  width: 75%;
+}
+
+.fbk-item-user-info i {
+  color: #ef910a;
+}
+
+.fbk-item-user p:first-child {
+  font-weight: 550;
+  font-size: 20px;
+  width: 100%;
+}
+
+.fbk-item .fbk-item-rating {
+  width: 45%;
+  height: 100%;
+}
+
+.fbk-item-review p {
+  color: #929191;
+}
+
+.fbk-item-review img {
+  width: 50%;
+  padding: 10px 2.5px;
 }
