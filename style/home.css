@@ -708,6 +708,12 @@ div > img {
   text-align: center;
 }
 
+.offers_link a:hover{
+  color: dimgrey;
+  background:lightcyan;
+  transition: all 0.2s ease;
+}
+
 /*khách sạn*/
 .rating_5 {
   font-size: 20px;

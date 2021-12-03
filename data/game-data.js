@@ -19,4 +19,9 @@ const data = [
         img: "/images/eogio.jpg",
         answer: "Bình Định"
     },
+    {
+        question: "Đây là hoạt động phổ biến ở miền Tây. Cho biết đây là gì?",
+        img: "/images/chonoi.jpg",
+        answer: "Chợ nổi"
+    }
 ]

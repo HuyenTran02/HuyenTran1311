@@ -127,7 +127,7 @@ const createTravelTemplate = (travelTours) => {
         <div class="travel-item-price">
         <span class="travel-item-price-from-to">${travelTour.price_text} </span>
         </div>
-        <a href="" class="travel-item-button click">
+        <a href="javascript:void(0);" class="travel-item-button click">
             MUA TOUR
         </a>
     </div>

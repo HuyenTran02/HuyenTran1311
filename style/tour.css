@@ -348,6 +348,7 @@ li.type > ul > li > span {
   text-decoration: none;
   border-radius: 2px;
   margin:-25px 0;
+  cursor: pointer;
 
 }
 .best-tour_btn:hover{
@@ -475,6 +476,7 @@ li.type > ul > li > span {
   margin-bottom: 40px;
   text-decoration: none;
   border-radius: 2px;
+  cursor: pointer;
   
 }
 

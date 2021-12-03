@@ -125,6 +125,7 @@ div img{
 .backpage i{
     margin: 10px ;
     color: lightskyblue;
+    cursor: pointer;
 }
 
 #btn:hover{
