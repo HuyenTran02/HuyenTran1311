@@ -297,8 +297,6 @@ li.type > ul > li > span {
   color: white;
 }
 
-
-
 .best-tour__img {
   display: flex;
   margin: 80px;
@@ -310,6 +308,7 @@ li.type > ul > li > span {
   padding: 0 10px;
   display: flex;
   flex-wrap: wrap;
+  
 }
 
 .col > div {
@@ -321,13 +320,11 @@ li.type > ul > li > span {
   width: 100%;
   height: 100%;
   border-radius: 15px;
+  transition: transform 0.3s ease;
 }
-
-
 
 .best-tour__img-item {
   position: relative;
-  transition: transform 0.5s ease;
   overflow: hidden;
 }
 
@@ -451,18 +448,8 @@ li.type > ul > li > span {
 .travel-item-price {
   margin-top: 15px;
   font-size: 20px;
-
   color: #9a9a9a;
   letter-spacing: 1px;
-}
-
-.travel-item-price-old {
-  opacity: 1;
-}
-
-.travel-item-price-saled {
-  color: #918d8d;
-  text-decoration: underline;
 }
 
 .travel-item-button {

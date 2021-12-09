@@ -43,12 +43,14 @@ $(document).ready(function() {
                 newGoodTours = newGoodTours.filter(tour => tour.location.toUpperCase() === li2)
 
                 if(li3){
-                    if( li3.includes('thấp đến cao'))
-                        newGoodTours.sort((a, b) => - (a.price - b.price) )
-                    else
+                    if( li3.includes('thấp tới cao'))
+                    {
                         newGoodTours.sort((a, b) => a.price - b.price)
+                    }
+                    else
+                        newGoodTours.sort((a, b) => b.price - a.price)
                     
-                    createTourTemplate(newGoodTours)
+                    createTourTemplate(newGoodTours);
                     $("section.tour_uu_dai").css("display", "none")
                     $("section.best-tour").css("display", "block")
                 }
@@ -57,13 +59,15 @@ $(document).ready(function() {
         else if(li1.includes('Tour ưu đãi')){
             if(li2){
                 
-                newTravelTours = newTravelTours.filter(tour => tour.location === li2)
+                newTravelTours = newTravelTours.filter(tour => tour.location.includes(li2));
 
                 if(li3){
-                    if( li3.includes('thấp đến cao'))
-                        newTravelTours.sort((a, b) => - (a.price - b.price) )
-                    else
+                    if( li3.includes('thấp tới cao'))
+                    {
                         newTravelTours.sort((a, b) => a.price - b.price)
+                    } 
+                    else
+                        newTravelTours.sort((a, b) => b.price - a.price)
                 
                     createTravelTemplate(newTravelTours)
                     $("section.best-tour").css("display", "none")
@@ -125,7 +129,7 @@ const createTravelTemplate = (travelTours) => {
         </div>
 
         <div class="travel-item-price">
-        <span class="travel-item-price-from-to">${travelTour.price_text} </span>
+        <span class="travel-item-price">${travelTour.price_text} </span>
         </div>
         <a href="javascript:void(0);" class="travel-item-button click">
             MUA TOUR

@@ -26,9 +26,9 @@ div.main-menu {
     margin-top: 20px;
   }
   
-  .menu-items li:last-child a{
+   .menu-items li:last-child {
     position: relative;
-  }
+  } 
   
   .menu-items li a {
     display: block;
@@ -68,12 +68,12 @@ div.main-menu {
   
   .menu-user {
     position: absolute;
-    top: 90px;
-    right: 1.5%;
-    width: 15.75%;
+    top: 60px;
+    right: -120%;
+    width: 250px;
     background: rgba(255, 255, 255, 0.35);
     border-radius: 100px;
-    visibility: hidden;
+     visibility: hidden; 
   }
   
   .menu-user::before {
@@ -83,7 +83,7 @@ div.main-menu {
     border-color: transparent transparent rgba(255, 255, 255, 0.35) transparent;
     position: absolute;
     top: -24px;
-    /* left: 97.5px; */
+    
   }
   
   .menu-user > div > a {

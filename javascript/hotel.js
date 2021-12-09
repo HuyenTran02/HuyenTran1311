@@ -3,15 +3,13 @@ $(document).ready(function() {
     createTourTemplate(tours);
     createRoomTemplate(rooms);
 
-
-    $(".click").click(function() {
-       alert('Vui lòng đăng nhập để thực hiện thao tác!')
-    })
-
-
     $("header, section, footer").addClass("wow animate__fadeIn")
     $("section.resort > div.content > div.resort-items > figure").addClass("wow animate__flipInY")
-    $("section.hotel > div.content > div.h-items > figure").addClass("wow animate__zoomIn")
+    $("section.hotels > div.content > div.h-items > figure").addClass("wow animate__zoomIn")
+
+    $(".click").click(function() {
+        alert('Vui lòng đăng nhập để thực hiện thao tác!')
+    })
 
     wow = new WOW ({
         boxClass: 'wow',
@@ -20,6 +18,7 @@ $(document).ready(function() {
         mobile: true,
         live: true
     })    
+
     wow.init();
 
     var li1, li2, li3;
@@ -49,8 +48,8 @@ $(document).ready(function() {
         
         li1 = li1 && li1.toUpperCase();
     
-        let newTours = [...tours];
-        let newRooms = [...rooms]
+        var newTours = [...tours];
+        var newRooms = [...rooms]
 
         if(li1.includes('KHU NGHỈ DƯỠNG')) {
             
@@ -70,7 +69,7 @@ $(document).ready(function() {
                         alert('Vui lòng đăng nhập để thực hiện thao tác!')
                      })
         
-                    $(".hotel").css("display", "none")
+                    $(".hotels").css("display", "none")
         
                     $(".resort").css({
                         "animation": "flash 1s ease-out",
@@ -105,7 +104,7 @@ $(document).ready(function() {
                         $(".resort").css("display", "none")
 
                         // tạo hiệu ứng nháy khi click vào nút tìm
-                        $(".hotel").css({
+                        $(".hotels").css({
                             "animation": "flash 1s ease-out",
                             "display" : "block"
                         })
@@ -122,8 +121,8 @@ $(document).ready(function() {
 })
 
 const createRating = (rating) => {
-    let output = ''
-    for(let i = 0; i < rating; i++) {
+    var output = ''
+    for(var i = 0; i < rating; i++) {
         output+= `<i class="fas fa-star"></i>`
     }
     return output
@@ -157,7 +156,7 @@ const createTourTemplate = (tours) => {
             </div>
         </figcaption>
     </figure>`);
-    resortContainer[0].innerHTML = output
+    resortContainer.html(output)
 }
 
 const createRoomTemplate = (rooms) => {
@@ -186,5 +185,5 @@ const createRoomTemplate = (rooms) => {
             </div>
         </figure>
         `)
-    hotelContainer[0].innerHTML = output
+    hotelContainer.html(output)
 }

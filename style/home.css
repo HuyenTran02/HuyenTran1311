@@ -138,13 +138,6 @@ header {
     }
   }
 
-  /* @keyframes fade {
-    0% {
-      transform: translateY(-30px);
-      opacity: 0;
-    }
-  } */
-
 /*----- Kham pha ----- */
 
 section.discovery {
@@ -324,12 +317,9 @@ section.discovery {
   .img-item img{
     max-width: 100%;
     max-height: 130px;
+    transition: all 0.5s ;
   }
-  .img-item img{
-    max-width: 100%;
-    max-height: 130px;
-    transition: all .5s ;
-  }
+  
   .img-item{
     height:auto ;
     margin: 2px;
@@ -361,7 +351,6 @@ section.discovery {
   height: 3px;
   width: 150px;
   background-color: var(--main-color);
-  /*border-radius: 10px;*/
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
@@ -388,128 +377,93 @@ section.discovery {
   margin: 40px ;
 }
 
-.promotion__item:hover {
-  -webkit-transform: translateY(-4px);
-      -ms-transform: translateY(-4px);
-          transform: translateY(-4px);
-  transition: transform 0.2s linear;
-}
-
 .promotion__img {
   position: relative;
+  transition: all 0.5s ;
 }
 .promotion__ninhbinh {
-  width:51%;
+  width:46%;
   background-image: url(/images/ninh\ binh.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  border-radius: 15px;
+  
 }
 
 .promotion__condao {
-  width: 50%;
+  width: 45%;
   background-image: url(/images/ConĐao.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  border-radius: 15px;
+  
 }
 
 .promotion__sondoong{
-  width: 50%;
+  width: 45%;
   background-image: url(/images/Son-doong.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  border-radius: 15px;
+ 
 }
 
 .promotion__item {
-  /*margin-left: 120px;*/
+
   position: relative;
-  box-shadow: 10px 10px 10px #aaaa
+  box-shadow: 10px 10px 10px #aaaa;
+  overflow: hidden;
+  position:relative ;
 }
 
-.promotion__item-saling {
-  position: relative;
+.promotion__item:hover .promotion__img{
+  -webkit-transform:scale(1.2);
+  transform: scale(1.2);
 }
 
 .promotion__item-body {
-  padding: 30px
+  padding: 30px ;
+  margin-left: 10px;
 }
 
 .promotion__item-body a {
-  /*text-decoration: none;*/
-  display: block;
+ display: block;
 }
-
-
 
 .promotion__item-head-headding {
   font-size: 30px;
-  /*line-height: 2rem;*/
   color: #555;
   font-weight: 600;
 }
 
 .promotion__item-head-location {
   font-size: 25px;
-  /*line-height: 1.5rem;*/
   color: #9a9a9a;
-  letter-spacing: 1px;
   margin-top: 10px;
 }
 
-.promotion__item-head-icon {
-  font-size: 1.5rem;
-}
 
 .promotion__item-decs-and-price {
-  border-top: 0.5px solid #f0ecec;
-  border-bottom: 0.5px solid #f0ecec;
-  margin: 10px 0;
-  padding: 10px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; 
-}
-
-.promotion__item-decs {
-  font-size: 20px;
-  line-height: 1.3rem;
-  color: #555;
-  letter-spacing: 2px;
-}
-
-.promotion__item-decs-text {
-  line-height: 2rem;
+  border-top: 1px solid #f0ecec;
+  border-bottom: 1px solid #f0ecec;
+  margin: 5px ;
+  padding: 15px 0;
+  justify-content: space-between; 
 }
 
 .promotion__item-price {
   color: #555;
   font-size: 25px;
-  line-height: 2.5rem;
-  letter-spacing: 1px; 
-  font-weight: 600;   
-}
-
-.promotion__item-price-sale {
-  font-size: 2rem;
-  text-decoration: line-through;
-  color: #9a9a9a;
+  font-weight: 600;  
+  margin-top: 5px; 
 }
 
 .promotion__item-text {
-  font-size: 18px;
-  line-height: 2.7rem;
+  font-size: 22px;
   color: #9a9a9a;
-  letter-spacing: 1px;
+ 
 }
 
-.promotion__item-btn {
-  margin-top: 22px;
-}
 
 /*CTA*/
 
